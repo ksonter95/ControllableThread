@@ -154,12 +154,11 @@ class ControllableThread(threading.Thread):
 
         Args:
             name: Name of the thread.
-
             queue: Priority queue for communication to the main thread.
 
         Raises:
-            :class:`cthread.InvalidName`: if name is not a string.
-            :class:`InvalidQueue`: if queue is not a Queue.
+            InvalidName: if name is not a string.
+            InvalidQueue: if queue is not a Queue.
         """
         threading.Thread.__init__(self)
 
@@ -269,7 +268,7 @@ class ControllableThread(threading.Thread):
 
     def _update_state(self, state):
         """ Update the state of the thread.
-
+        
         Args:
             state: New state of the thread.
 
@@ -304,11 +303,11 @@ class ControllableThread(threading.Thread):
             5. RESUMED
             6. KILLED
             7. Any alternative individual thread-specific states.
-
+        
         Each of these states has a callback function that must be implemented
         in any of the child threads.  Of course, the alterative state callback
         should not be implemented if there are no alternative states.
-
+        
         This cyclic executive will execute as long as the thread is not killed.
         """
         self._logger.info("Starting thread: {0}...".format(self._name))
