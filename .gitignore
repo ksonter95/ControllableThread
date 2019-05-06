@@ -1,10 +1,17 @@
-# Git configuration #
+# Configuration #
 .git/
+.vscode/
+
+# Caches #
+__pycache__
 
 # Sphinx rendered files #
 docs/build/
 docs/source/_static
 docs/source/_templates
 
-# Virtual envelope #
+# Distribution/Packaging #
 env/
+build/
+*.egg-info/
+dist/
