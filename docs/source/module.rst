@@ -15,3 +15,4 @@ ThreadState (:class:`cthread.ThreadState`)
 
 .. autoclass:: cthread.ThreadState
    :members:
+
