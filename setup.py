@@ -15,7 +15,7 @@ setuptools.setup(
     url="https://github.com/ksonter95/ControllableThread.git",
     packages=setuptools.find_packages(),
     classifiers=[
-        "Programming Language :: Python :: 3.5"
+        "Programming Language :: Python :: 3.5",
         "Programming Language :: Python :: 3.7",
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",

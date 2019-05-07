@@ -16,8 +16,7 @@ For Python 2/3::
    :maxdepth: 2
    :caption: Documentation:
 
-   module
-   exception
+   modules
 
 .. toctree::
    :maxdepth: 2
@@ -31,4 +30,3 @@ Indices and tables
 
 * :ref:`genindex`
 * :ref:`modindex`
-* :ref:`search`
