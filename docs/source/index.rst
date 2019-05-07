@@ -17,6 +17,7 @@ For Python 2/3::
    :caption: Documentation:
 
    modules
+   examples
 
 .. toctree::
    :maxdepth: 2

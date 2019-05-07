@@ -12,7 +12,8 @@ Exceptions
 The custom exceptions that :mod:`cthread` can raise are documented below.
 
 .. automodule:: cthread
-    :members: CThreadException, InvalidArgument, InvalidState, InvalidMaxState,
+    :members: CThreadException, CallbackNotImplemented, InvalidArgument,
+        InvalidState, InvalidMaxState, InvalidAlternativeState, InvalidCallback,
         InvalidName, InvalidQueue
     :undoc-members:
     :show-inheritance:
@@ -20,7 +21,7 @@ The custom exceptions that :mod:`cthread` can raise are documented below.
 Classes
 -------
 
-The classes contained within the :mod:`chtread` package are documented below.
+The classes contained within the :mod:`cthread` package are documented below.
 
 .. automodule:: cthread
     :members: ControllableThread, ThreadState
