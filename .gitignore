@@ -2,8 +2,9 @@
 .git/
 .vscode/
 
-# Caches #
+# Byte-compiled / optimized / DLL files #
 __pycache__
+*.py[cod]
 
 # Sphinx rendered files #
 docs/build/

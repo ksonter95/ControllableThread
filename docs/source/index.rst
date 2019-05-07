@@ -10,7 +10,7 @@ Installation
 ------------
 For Python 2/3::
 
-    pip install cthread
+    >>> pip install cthread
 
 .. toctree::
    :maxdepth: 2

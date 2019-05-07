@@ -5,7 +5,7 @@ with open("README.md", "r") as f:
 
 setuptools.setup(
     name="cthread",
-    version="1.0.1",
+    version="1.1.0",
     author="Kieran Sonter",
     author_email="ksonter95@gmail.com",
     description="Python implementation of a thread that can be started, " \
