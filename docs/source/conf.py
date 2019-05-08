@@ -22,7 +22,7 @@ copyright = '2019, Kieran Sonter'
 author = 'Kieran Sonter'
 
 # The full version, including alpha/beta/rc tags
-release = '1.1'
+release = '1.2.1'
 
 
 # -- General configuration ---------------------------------------------------

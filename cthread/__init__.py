@@ -1,5 +1,5 @@
 # Exceptions #
-from cthread.cthread import CThreadException
+from .cthread import CThreadException
 from cthread.cthread import CallbackNotImplemented
 from cthread.cthread import InvalidArgument
 from cthread.cthread import InvalidState

@@ -12,6 +12,11 @@ For Python 2/3::
 
     >>> pip install cthread
 
+Usage
+-----
+See the Quickstart and Alternative States examples listed in :doc:`Examples 
+<examples>`.
+
 .. toctree::
    :maxdepth: 2
    :caption: Documentation:

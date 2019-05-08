@@ -4,6 +4,40 @@ Examples
 .. contents:: :local:
    :depth: 3
 
+.. note::
+   In order for the :mod:`cthread` package to be fully functional, the developer
+   must follow two coding practices:
+   
+   1. Any code within the
+      :py:attr:`cthread.ControllableThread._active_callback()` callback function
+      and any registered alternative state callback function must be:
+      
+      - Non-blocking (at the very least it must only block for a short
+        period of time), and
+      - Contain no indefinite ``while`` or ``for`` loops.
+      
+      In short, the :py:attr:`cthread.ControllableThread._active_callback()`
+      callback function and any registered alternative state callback functions
+      must be written to minimize its execution time.  This allows the thread
+      to be controllable.  This is because it is only at the end of each
+      callback function that a check is conducted to determine whether the
+      state of the thread must be updated.
+   2. The code within the
+      :py:attr:`cthread.ControllableThread._started_callback()`
+      :py:attr:`cthread.ControllableThread._paused_callback()`,
+      :py:attr:`cthread.ControllableThread._resumed_callback()`, and
+      :py:attr:`cthread.ControllableThread._killed_callback()` callback
+      functions will only execute once.  There is a wrapper function for each
+      callback function within the :class:`cthread.ControllableThread` class.
+      This wrapper function automatically updates the thread state to
+      :py:attr:`cthread.ThreadState.ACTIVE` at the completion of the
+      :py:attr:`cthread.ControllableThread._started_callback()` and
+      :py:attr:`cthread.ControllableThread._resumed_callback()` callback
+      functions, and :py:attr:`cthread.ThreadState.IDLE` at the completion of
+      the :py:attr:`cthread.ControllableThread._paused_callback()` callback
+      function.  These callbacks should be written in such a way that they
+      pause or resume/start thread functionality.
+
 Quickstart
 ----------
 
@@ -52,7 +86,7 @@ additional states.  The lines:
 .. literalinclude:: ../../examples/alternative_state.py
    :language: python
    :linenos:
-   :lines: 28,29
+   :lines: 38,39
 
 can be replaced in each of the additional state callback functions with
 functional state code that is specific to the user's needs.

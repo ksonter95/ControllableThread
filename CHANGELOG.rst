@@ -1,6 +1,14 @@
 Change Log
 ==========
 
+1.2.1 (2019-05-08)
+------------------
+
+Features
+^^^^^^^^
+- Added the additional classes to the package (imported into __init__.py) that
+  were released as part of version 1.2.
+
 1.2 (2019-05-07)
 ----------------
 
