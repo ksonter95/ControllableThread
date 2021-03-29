@@ -17,7 +17,7 @@ packaging==19.0
 pbr==5.2.0
 pigpio==1.42
 pkginfo==1.5.0.1
-Pygments==2.3.1
+Pygments==2.7.4
 pylint==2.3.1
 pyparsing==2.4.0
 pytz==2019.1
